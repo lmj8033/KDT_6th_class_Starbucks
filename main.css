@@ -1,0 +1,328 @@
+/* COMMON */
+body {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: 'Nanum Gothic', sans-serif;
+    height: 3000px;
+}
+
+.inner {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #f6f5ef;
+    border-bottom: 1px solid #c8c8c8;
+    border-top: 1px solid #669900;
+    z-index: 1;
+}
+
+header>.inner {
+    background-color: #f6f5ef;
+    height: 120px;
+}
+
+header .inner .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+    height: 75px;
+}
+
+header .inner .logo img {
+    display: block;
+}
+
+header .inner .sub_menu {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+header .inner .sub_menu .menu {
+    display: flex;
+}
+
+header .inner .sub_menu .menu li {
+    line-height: 32px;
+}
+
+header .inner .sub_menu .menu li:not(:last-child):after {
+    content: "|";
+    font: 12px;
+    color: #c8c8c8;
+}
+
+
+header .inner .sub_menu .menu li a {
+    padding: 10px 15px;
+    font-size: 12px;
+    color:#656565;
+    text-decoration: none;
+}
+
+header .inner .sub_menu .menu li a:hover {
+    text-decoration: underline;
+}
+
+/* INPUT */
+header .inner .search {
+    position: relative;
+}
+
+header .inner .search input {
+    width: 40px;
+    height: 34px;
+    transition: width 0.4s;
+    font-size: 14px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+header .inner .search input:focus {
+    width: 180px;
+    outline-color: green;
+}
+
+header .inner .search span {
+    position: absolute;
+    right: 3px;
+    font-size: 24px;
+    height: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* MAIN MENU */
+header .inner .main_menu {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: auto 0;
+    right: 0;
+}
+
+header .inner .main_menu .item {
+}
+
+header .inner .main_menu .item:hover {
+    background-color: #2c2a29;
+    color: #669900;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main_menu .item .item__name {
+    padding: 10px 20px 34px 20px;
+    font-size: 13px;
+}
+
+.main_menu .item .item__contents {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    display: none;
+}
+
+.main_menu .item:hover .item__contents {
+    display: block;
+}
+
+.main_menu .item .item__contents .item__contents__menu{
+    background-color: #2c2a29;
+    padding: 0;
+    width: 100%;
+}
+
+header .main_menu .item .item__contents .item__contents__menu {
+
+
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner {
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner>li {
+    width: 200px; 
+    padding: 0 20px 0 0;
+}
+
+
+header .main_menu .item .item__contents .item__contents__menu .inner>li>a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size:15px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner>li>a:hover {
+    text-decoration: underline;
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner>li>ul {
+    padding-bottom: 10px;
+    
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner>li>ul>li {
+    padding: 3px 15px;
+    color: #999;
+    font-size: 12px; 
+}
+
+header .main_menu .item .item__contents .item__contents__menu .inner>li>ul>li:hover {
+    text-decoration: underline;
+}
+
+
+/* ADDITIONAL */
+
+.main_menu .item .item__contents .item__contents__additional{
+    background-image: url("./images/main_menu_pattern.jpg");
+    padding: 20px 0;
+}
+
+.main_menu .item .item__contents .item__contents__additional .inner{
+
+}
+
+.main_menu .item .item__contents .item__contents__additional .inner a {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.main_menu .item .item__contents .item__contents__additional .inner a:hover {
+    text-decoration: underline;
+}
+
+.main_menu .item .item__contents .item__contents__additional .inner p {
+    font-size: 12px;
+    color: #669900;
+    font-weight: bold;
+}
+
+/* BADGES */
+
+header .badges {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+
+
+/* VISUAL */
+
+.visual {
+    background-image: url(./images/visual_bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.visual .inner {
+    position: relative;
+    height: 646px;
+}
+
+.visual .inner .slogan {
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.visual .inner .slogan>img {
+    margin-top: 60px;
+}
+
+.visual .inner .slogan .btn {
+    opacity: 0;
+    position: absolute;
+    border: 2px solid #1c3832;
+    border-radius: 3px;
+    text-decoration: none;
+    left: 0px;
+    margin-top: 130px;
+    transition: 0.4s;
+    color: #1c3832;
+    padding: 6px 20px;
+}
+
+.visual .inner .slogan .btn:hover {
+    color: white;
+    background-color: #1c3832;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.visual .inner .image {
+    position: absolute;
+}
+
+.visual .inner .image.item_1 {
+    width: 260px;
+    right: 210px;
+    bottom: 170px;
+    opacity: 0;
+    transition: 0.4s; 
+}
+
+.visual .inner .image.item_2 {
+    width: 590px;
+    bottom: 80px;
+    left: 40px;
+    opacity: 0;
+    transition: 0.4s; 
+}
+
+.visual .inner .image.item_3 {
+    width: 370px;
+    right: -110px;
+    bottom: 50px;
+    opacity: 0;
+    transition: 0.4s; 
+}
+
+.visual .inner:hover .slogan {
+    opacity: 1;
+}
+
+.visual .inner:hover .slogan .btn {
+    opacity: 1;
+}
+
+.visual .inner:hover .image.item_1 {
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.visual .inner:hover .image.item_2 {
+    opacity: 1;
+    transition-delay: 1.4s;
+}
+
+.visual .inner:hover .image.item_3 {
+    opacity: 1;
+    transition-delay: 2.1s;
+}
