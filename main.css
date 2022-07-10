@@ -14,6 +14,84 @@ body {
     margin: 0 auto;
 }
 
+.strong {
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    border-radius: 5px;
+}
+
+.btn--reverse {
+    margin-bottom: 20px;
+    background-color: #00704a;
+    border-color: #00704a;
+    color: white;
+}
+
+.btn--reverse:hover {
+    text-decoration: underline;
+}
+
+.btn--white {
+    display: inline-block;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    border-radius: 5px;
+    border-color: white;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.white__button {
+    display: inline-block;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 5px;
+    border-color: white;
+    color: white;
+    margin-bottom: 50px;
+}
+
+
+.btn--white:hover {
+    text-decoration: underline;
+}
+
+.btn--light_green {
+    border-color: #00704a;
+    color: #00704a;
+    transition: 0.4s;
+}
+
+.btn--light_green:hover {
+    color: white;
+    background-color: #00704a;
+    text-decoration: underline;
+}
+
+.btn--gold {
+    border-color: goldenrod;
+    color: goldenrod;
+    transition: 0.6s;
+}
+
+.btn--gold:hover {
+    color: white;
+    background-color: goldenrod;
+    text-decoration: underline;
+}
+
 /* HEADER */
 header {
     top: 0;
@@ -22,7 +100,7 @@ header {
     background-color: #f6f5ef;
     border-bottom: 1px solid #c8c8c8;
     border-top: 1px solid #669900;
-    z-index: 1;
+    z-index: 2;
 }
 
 header>.inner {
@@ -325,4 +403,588 @@ header .badges {
 .visual .inner:hover .image.item_3 {
     opacity: 1;
     transition-delay: 2.1s;
+}
+
+/* NOTICE */
+.notice {}
+
+.notice .notice_line {
+    position: relative;
+}
+
+.notice .notice_line .bg_left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #111111;
+}
+
+.notice .notice_line .bg_right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #f6f5ef;
+}
+
+.notice .notice_line .inner {
+    height: 62px;
+    display: flex;
+}
+
+.notice .notice_line .inner .inner__left {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    color: #f6f5ef;
+}
+
+.notice .notice_line .inner .inner__left h1 {
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+}
+
+.notice .notice_line .inner .inner__left .swiper_container {
+    position: absolute;
+    left: 80px;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.notice .notice_line .inner .inner__left a {
+    position: absolute;
+    right: 20px;
+    color: #f6f5ef;
+}
+
+.notice .notice_line .inner .inner__left a span {
+    font-size: 36px;
+    vertical-align: bottom;
+}
+
+.notice .notice_line .inner .inner__right {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: #f6f5ef;
+    display: flex;
+    align-items: center;
+    color: #111111;
+}
+
+.notice .notice_line .inner .inner__right h1 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+    left: 200px;
+}
+
+.notice .notice_line .inner .inner__right a {
+    position: absolute;
+    right: 40px;
+    color: #111111;
+}
+
+.notice .notice_line .inner .inner__right a span {
+    font-size: 36px;
+    vertical-align: bottom;
+}
+
+/* REWARDS */
+
+.rewards {
+    background-color: #1e3932;
+}
+
+.rewards .inner{
+    padding: 30px 0 40px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.rewards .inner>a {}
+
+.rewards .inner>a>img {
+    width: 176px;
+    display: block;
+}
+.rewards .inner .rewards__items {
+    flex-grow: 1;
+}
+
+.rewards .inner .rewards__items .rewards__items__register {
+    position: relative;
+    box-shadow: 0 0.5px #c8c8c8;
+    padding-bottom: 12px;
+}
+
+.rewards .inner .rewards__items .rewards__items__register p {
+    display: block;
+    font-size: 17px;
+    color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__register p.subject {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.rewards .inner .rewards__items .rewards__items__register .buttons {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+}
+
+.rewards .inner .rewards__items .rewards__items__card {
+    position: relative;
+    padding-top: 20px;
+}
+
+.rewards .inner .rewards__items .rewards__items__card p {
+    font-size: 14px;
+    color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__card .buttons {
+    position: absolute;
+    right: 0;
+    padding-top: 20px;
+}
+
+/* PERU */
+
+.peru {
+    position: relative;
+    background-image: url(./star-bucks-main/star-bucks-main/images/peru_bg.jpg);
+    height: 570px;
+    overflow: hidden;
+}
+
+.peru::before {
+    content:""; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-image: url(./star-bucks-main/star-bucks-main/images/peru_bg_left.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 450px;
+}
+
+.peru::after {
+    content:""; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background-image: url(./star-bucks-main/star-bucks-main/images/peru_bg_right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 420px;
+    height: 410px;
+}
+
+.peru .inner {
+    height: 500px;
+}
+
+.peru .inner .img_product {
+    display: block;
+    position: absolute;
+    width: 305px;
+    top: 85px;
+    left: 120px;
+    transform: translate(-500px, 0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.peru .inner:hover .img_product,
+.peru .inner:hover .peru__contents {
+    transform: translate(0px, 0);
+    opacity: 1;
+}
+
+.peru .inner .peru__contents {
+    position: absolute;
+    top: 160px;
+    right: 10px;
+    transform: translate(500px, 0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.peru .inner .peru__contents>img {
+    width: 440px;
+}
+
+.peru .inner .peru__contents .btn {
+    display: block;
+    width: 125px;
+    margin-top: 40px;
+}
+
+.indonesia {
+    background-image: url(./star-bucks-main/star-bucks-main/images/indonesia_bg.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.indonesia .inner {
+
+}
+
+.indonesia .inner .indonesia__image {
+    position: absolute;
+    left: -400px;
+
+}
+
+.indonesia .inner .indonesia__title {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+
+.indonesia .inner .btn.btn--gold {
+    position: absolute;
+    display: block;
+    width: 125px;
+    top: 245px;
+    left: 315px;   
+}
+
+.indonesia::before {
+    content:""; 
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    display: block;
+    background-image: url(./star-bucks-main/star-bucks-main/images/indonesia_bg_left.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 373px;
+    height: 200px;
+}
+
+.indonesia::after {
+    content:""; 
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    display: block;
+    background-image: url(./star-bucks-main/star-bucks-main/images/indonesia_bg_right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+}
+
+/* FAVORITE */
+
+.favorite{
+    background-image: url(./star-bucks-main/star-bucks-main/images/fav_bg.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    height: 800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.favorite .inner {
+    height: 800px;
+}
+
+.favorite .inner .fav_title1{
+    position: absolute;
+    width: 260px;
+    top: 100px;
+    left: 120px;
+    transform: translate(-500px, 0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.favorite .inner .fav_title2{
+    position: absolute;
+    top: 350px;
+    left: 15px;
+    transform: translate(-500px, 0);
+    transition: 2s;
+    opacity: 0;
+}
+
+.favorite .inner:hover .fav_title1,
+.favorite .inner:hover .fav_title2 {
+    transform: translate(0px, 0);
+    opacity: 1;
+}
+
+.favorite .inner .fav_image{
+    position: absolute;
+    right: -120px;
+    top: 100px;
+    width: 700px;
+}
+
+.favorite .inner .btn-white{
+    position: absolute;
+    display: block;
+    left: 250px;
+    top: 550px;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+  
+.favorite .inner .btn-white:hover{
+    text-decoration: underline;
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+
+.magazine {
+    background-image: url(./star-bucks-main/star-bucks-main/images/magazine_bg.png);
+    height: 350px;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    margin-top: 50px;
+}
+
+.magazine .inner {
+    height: 340px;
+}
+
+.magazine .inner .magazine_image {
+    position: relative;
+    left: 650px;
+    bottom: 50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.magazine .inner:hover .magazine_image{
+    opacity: 1;
+}
+
+.magazine .inner .magazine_title {
+    position: relative;
+    right: 350px;
+    bottom: 190px;
+}
+
+.white_btn {
+    position: absolute;
+    display: inline-block;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    left: 310px;
+    bottom: 90px; 
+    transition: 0.4s;
+}
+
+.white_btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+/* STORE */
+.store{
+    position: relative;
+    background-image: url(./star-bucks-main/star-bucks-main/images/store_bg.jpg);
+    height: 400px;
+    overflow: hidden;
+}
+
+.store .inner {
+    height: 350px;
+}
+
+.store .inner .store_img1 {
+    position: absolute;
+    left: 250px;
+    z-index: 1;
+    top: 140px;
+}
+
+.store .inner .store_img2 {
+    position: absolute;
+    left: 30px;
+}
+
+.store .inner .store_img3 {
+    position: absolute;
+    top: -60px;
+    overflow: hidden;
+    right: 300px;
+}
+.store .inner .store_img4{
+    position: absolute;
+    top:300px;
+    right: -70px;
+}
+
+
+.store .inner .store_title1 {
+    position: absolute;
+    left: 650px;
+    top:110px;
+    transform: translate(600px,0);
+    opacity: 0;
+    transition: 2.4s;
+}
+
+.store .inner:hover .store_title1 {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.store .inner .store_title2 {
+    position: absolute;
+    left: 650px;
+    top: 200px;
+    transform: translate(600px,0);
+    opacity: 0;
+    transition: 2.8s;
+}
+
+.store .inner:hover .store_title2 {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.black_btn {
+    position: absolute;
+    display: inline-block;
+    padding: 4px 18px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 5px;
+    top: 280px;
+    right: 345px;
+    color: black; 
+    transition: 0.4s;
+}
+
+.black_btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+}
+
+footer .inner{
+    display: flex;
+    height: 500px;
+
+}
+
+footer .inner .footer_menu {
+}
+
+footer .inner .footer_menu>ul>a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    width:180px;
+}
+
+footer .inner .footer_menu>ul>a:hover {
+    text-decoration: underline;
+}
+
+footer .inner .footer_menu>ul {
+    color: white;
+    padding: 80px 50px 80px 30px;    
+}
+
+footer .inner .footer_menu>ul>li {
+    font-size: 13px;
+    width: 130px;
+    padding-bottom: 10px;
+}
+
+
+footer .inner .footer_menu>ul>li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.last_btn {
+    text-align: center;
+    padding: 20px 0 40px 0;
+    font-size: 13px;
+}
+
+.last_btn1 {
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 10px;
+}
+.last_btn2 {
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 10px;
+}
+.last_btn3 {
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 10px;
+}
+
+.last_btn1:hover,
+.last_btn2:hover,
+.last_btn3:hover {
+    text-decoration: underline;
+}
+
+footer .last_bottom .personal {
+    display: flex;
+    margin-left: 220px;
+}
+
+footer .last_bottom .personal li {
+    color: white;
+    font-size: 12px;
+    padding: 10px 15px;
+
+}
+
+footer .last_bottom .personal li:not(:last-child):after {
+    content: "|";
+    font: 12px;
+    color: #c8c8c8;
+    padding-left: 15px;
 }
