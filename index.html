@@ -39,8 +39,15 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0" />
 
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./main.css">
+
+    <!-- MAIN JS -->
+    <script defer src="./main.js"></script>
 
 </head>
 
@@ -411,7 +418,7 @@
         <div class="inner">
             <div class="slogan">
                 <img src="./images/visual_slogan.png" alt="FIND YOUR TASTE"/>
-                <a href="#" class="btn">자세히 보기</a>
+                <a href="#" class="visual_btn">자세히 보기</a>
             </div>
             <img src="./images/visual_item_1.png" alt="item_1" class="image item_1"/>
             <img src="./images/visual_item_2.png" alt="item_2" class="image item_2"/>
@@ -427,20 +434,48 @@
             <div class="inner">
                 <div class="inner__left">
                     <h1>공지사항</h1>
-                    <div class="swiper_container">My DT Pass 관련 서비스 점검 안내</div>
-                    <a href="#"><span class="material-symbols-outlined">
-                        add_circle
-                    </span></a>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">My DT Pass 이용 안내</div>
+                            <div class="swiper-slide">My DT Pass 관련 서비스 점검 안내</div>
+                            <div class="swiper-slide">시스템 개선 및 점검 안내</div>
+                            <div class="swiper-slide">전자 영수증 서비스 점검 안내</div>
+                            <div class="swiper-slide">스타벅스 e-Gift Card 구매 가능 금액 안내</div>
+                        </div>
+                    </div>
+                    <a href="javascript:controlAutoplay();"><span class="material-symbols-outlined">add_circle</span></a>
                 </div>
                 <div class="inner__right">
                     <h1>스타벅스 프로모션</h1>
-                    <a href="#"><span class="material-symbols-outlined">
-                        expand_circle_down
-                    </span></a>
-                </div>
-                
+                    <a href="javascript:void(0);" class="toggle-promotion"><span class="material-symbols-outlined">expand_circle_down</span></a>
+                </div> 
+            
             </div>
         </div>
+
+         <!-- PROMOTION -->
+         <div class="promotion">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_1.jpg" alt=""/>
+                        <a href="#" class="btn btn--black">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_2.jpg" alt=""/>
+                        <a href="#" class="btn btn--black">자세히 보기</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/promotion_3.jpg" alt=""/>
+                        <a href="#" class="btn btn--black">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        
     </section>
 
     <!-- REWARDS -->

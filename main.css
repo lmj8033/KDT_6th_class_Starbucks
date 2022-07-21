@@ -157,6 +157,7 @@ header .inner .sub_menu .menu li a:hover {
 /* INPUT */
 header .inner .search {
     position: relative;
+    cursor: pointer;
 }
 
 header .inner .search input {
@@ -324,17 +325,14 @@ header .badges {
     height: 646px;
 }
 
-.visual .inner .slogan {
+.visual .inner .slogan>img {
     position: absolute;
+    margin-top: 60px;
     opacity: 0;
     transition: 0.4s;
 }
 
-.visual .inner .slogan>img {
-    margin-top: 60px;
-}
-
-.visual .inner .slogan .btn {
+.visual .inner .slogan .visual_btn {
     opacity: 0;
     position: absolute;
     border: 2px solid #1c3832;
@@ -347,7 +345,7 @@ header .badges {
     padding: 6px 20px;
 }
 
-.visual .inner .slogan .btn:hover {
+.visual .inner .slogan .visual_btn:hover {
     color: white;
     background-color: #1c3832;
     text-decoration: underline;
@@ -382,27 +380,29 @@ header .badges {
     transition: 0.4s; 
 }
 
-.visual .inner:hover .slogan {
+.visual.animate .inner .slogan>img {
     opacity: 1;
+    transition-delay: 0.2s;
 }
 
-.visual .inner:hover .slogan .btn {
+.visual.animate .inner .image.item_1 {
     opacity: 1;
+    transition-delay: 0.8s;
 }
 
-.visual .inner:hover .image.item_1 {
+.visual.animate .inner .image.item_2 {
     opacity: 1;
-    transition-delay: 0.7s;
+    transition-delay: 1.2s;
 }
 
-.visual .inner:hover .image.item_2 {
+.visual.animate .inner .image.item_3 {
     opacity: 1;
-    transition-delay: 1.4s;
+    transition-delay: 1.8s;
 }
 
-.visual .inner:hover .image.item_3 {
+.visual.animate .inner .slogan .visual_btn {
     opacity: 1;
-    transition-delay: 2.1s;
+    transition-delay: 2.2s;
 }
 
 /* NOTICE */
@@ -493,11 +493,106 @@ header .badges {
     position: absolute;
     right: 40px;
     color: #111111;
+    transition: 0.4s;
 }
 
 .notice .notice_line .inner .inner__right a span {
     font-size: 36px;
     vertical-align: bottom;
+}
+
+.notice .promotion {
+    position: relative;
+    height: 659px;
+    background-color: #f6f5ef;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.notice .promotion.hide {
+    height: 0px;
+}
+.notice .promotion .swiper {
+    height: 600px;
+    width: calc(819px * 3 + 20px);
+    top: 40px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.notice .promotion .swiper .swiper-wrapper {}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide {
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide-active {
+    opacity: 1;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn {
+    position: absolute;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 40PX;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px solid black;
+    color: black;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn:hover {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    transition: 0.4s;
+} 
+
+.notice .promotion .swiper .swiper-pagination {
+}
+
+.notice .promotion .swiper .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+}
+
+.notice .promotion .swiper .swiper-pagination-bullet-active{
+    background-image: url("./images/promotion_on.png");
+    background-size: cover;
+    background-color: transparent;
+}
+
+.notice .promotion .swiper .swiper-button-prev,
+.notice .promotion .swiper .swiper-button-next {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 260px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.notice .promotion .swiper .swiper-button-prev:after,
+.notice .promotion .swiper .swiper-button-next:after {
+    font-size: 25px;
+    color: #333;
+}
+
+.notice .promotion .swiper .swiper-button-prev {
+    left: 50%;
+    transform: translate(-550px , 0);
+}
+
+.notice .promotion .swiper .swiper-button-next {
+    right: 50%;
+    transform: translate(550px , 0);
 }
 
 /* REWARDS */
@@ -559,7 +654,20 @@ header .badges {
     position: absolute;
     right: 0;
     padding-top: 20px;
-}
+    top: 0;
+  }
+
+  .notice .inner .inner__left .swiper {
+    position: absolute;
+    height: 62px;
+    left: 80px;
+    font-size: 14px;
+  }
+
+  .notice .inner .inner__left .swiper .swiper-wrapper .swiper-slide {
+    line-height: 62px;
+    height: 62px;
+  }
 
 /* PERU */
 
@@ -596,9 +704,6 @@ header .badges {
     height: 410px;
 }
 
-.peru .inner {
-    height: 500px;
-}
 
 .peru .inner .img_product {
     display: block;
@@ -611,10 +716,11 @@ header .badges {
     opacity: 0;
 }
 
-.peru .inner:hover .img_product,
-.peru .inner:hover .peru__contents {
+.peru.animate .inner .img_product,
+.peru.animate .inner .peru__contents {
     transform: translate(0px, 0);
     opacity: 1;
+    transition: 2.5s;
 }
 
 .peru .inner .peru__contents {
@@ -644,9 +750,6 @@ header .badges {
     overflow: hidden;
 }
 
-.indonesia .inner {
-
-}
 
 .indonesia .inner .indonesia__image {
     position: absolute;
@@ -728,8 +831,8 @@ header .badges {
     opacity: 0;
 }
 
-.favorite .inner:hover .fav_title1,
-.favorite .inner:hover .fav_title2 {
+.favorite.animate .inner .fav_title1,
+.favorite.animate .inner .fav_title2 {
     transform: translate(0px, 0);
     opacity: 1;
 }
@@ -778,10 +881,10 @@ header .badges {
     left: 650px;
     bottom: 50px;
     opacity: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 
-.magazine .inner:hover .magazine_image{
+.magazine.animate .inner .magazine_image{
     opacity: 1;
 }
 
@@ -856,9 +959,16 @@ header .badges {
     transition: 2.4s;
 }
 
-.store .inner:hover .store_title1 {
+.store.animate .inner .store_title1,
+.store.animate .inner .store_title2 {
     transform: translate(0,0);
     opacity: 1;
+}
+
+.store.animate .inner .black_btn {
+    transform: translate(0,0);
+    opacity: 1;
+    transition: 3.2s;
 }
 
 .store .inner .store_title2 {
@@ -868,11 +978,6 @@ header .badges {
     transform: translate(600px,0);
     opacity: 0;
     transition: 2.8s;
-}
-
-.store .inner:hover .store_title2 {
-    transform: translate(0,0);
-    opacity: 1;
 }
 
 .black_btn {
@@ -886,6 +991,8 @@ header .badges {
     right: 345px;
     color: black; 
     transition: 0.4s;
+    transform: translate(600px,0);
+    opacity: 0;
 }
 
 .black_btn:hover {
@@ -910,6 +1017,7 @@ footer .inner .footer_menu {
 }
 
 footer .inner .footer_menu>ul>a {
+    display: block;
     color: white;
     text-decoration: none;
     font-size: 14px;
@@ -972,8 +1080,8 @@ footer .inner .footer_menu>ul>li:hover {
 
 footer .last_bottom .personal {
     display: flex;
-    margin-left: 220px;
-}
+    justify-content: center;
+  }
 
 footer .last_bottom .personal li {
     color: white;
@@ -988,3 +1096,4 @@ footer .last_bottom .personal li:not(:last-child):after {
     color: #c8c8c8;
     padding-left: 15px;
 }
+
