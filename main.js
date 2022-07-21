@@ -51,7 +51,7 @@ const swiperPromotion = new Swiper(".promotion .swiper", {
     centeredSlides: true,
     loop: true,
     autoplay: {
-        delay:1000,
+        delay:4000,
         disableOnInteraction: false,
     },
     pagination: {
@@ -96,15 +96,6 @@ let scrollYpos;
 window.addEventListener("scroll", function() {
     scrollYpos = window.scrollY;
     console.log(`current is ${scrollYpos}`);
-    
-    // window.onload = () => {
-    // const visualInner = document.querySelector(".visual");
-    // visualInner.classList.add("animate");
-    // }; 
-    if(scrollYpos > 0) {
-        const visualAnimate = this.document.querySelector(".visual");
-        visualAnimate.classList.add("animate");
-    }
       
     if(scrollYpos > 300) {
         const peruAnimate = document.querySelector(".peru");
@@ -127,3 +118,7 @@ window.addEventListener("scroll", function() {
     };
 });
 
+window.onload = () => {
+    const visualInner = document.querySelector(".visual");
+    visualInner.classList.add("animate");
+}; 

@@ -402,7 +402,7 @@ header .badges {
 
 .visual.animate .inner .slogan .visual_btn {
     opacity: 1;
-    transition-delay: 2.2s;
+    transition: opacity 1s linear 2.2s;
 }
 
 /* NOTICE */
